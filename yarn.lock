@@ -3657,7 +3657,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^11.4.0":
+"chromatic@npm:^11.4.0, chromatic@npm:^11.5.5":
   version: 11.5.5
   resolution: "chromatic@npm:11.5.5"
   peerDependencies:
@@ -5985,6 +5985,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^7.13.1"
     "@typescript-eslint/parser": "npm:^7.13.1"
     "@vitejs/plugin-react-swc": "npm:^3.5.0"
+    chromatic: "npm:^11.5.5"
     eslint: "npm:^8.57.0"
     eslint-plugin-react-hooks: "npm:^4.6.2"
     eslint-plugin-react-refresh: "npm:^0.4.7"

@@ -42,3 +42,12 @@ export const CustomColor: Story = {
     fontColor: "purple",
   },
 };
+
+export const CustomBackgroundColor: Story = {
+  args: {
+    label: "Custom background color",
+    size: "h1",
+    fontColor: "white",
+    backgroundColor: "black",
+  },
+};
