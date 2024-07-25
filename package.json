@@ -1,20 +1,44 @@
 {
-  "name": "my-storybook",
-  "private": true,
-  "version": "0.0.0",
+  "name": "gax-custom-components",
+  "version": "0.0.1-rc3",
   "type": "module",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "keywords": [
+    "react",
+    "vite",
+    "storybook",
+    "chromatic",
+    "gerardo"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/JerryA1/sb-components-vite",
+  "repository": {
+    "url": "https://github.com/JerryA1/sb-components-vite",
+    "type": "git"
+  },
+  "files": [
+    "dist/"
+  ],
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "yarn clean && tsc && yarn copyfiles",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_68ab993350f4484"
-  },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "chromatic": "npx chromatic --project-token=chpt_68ab993350f4484",
+    "clean": "rimraf dist/",
+    "copyfiles": "copyfiles -u 1 src/**/*.css dist/"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",
@@ -26,16 +50,21 @@
     "@storybook/react": "^8.2.3",
     "@storybook/react-vite": "^8.2.3",
     "@storybook/test": "^8.2.3",
+    "@types/copyfiles": "^2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
     "@typescript-eslint/parser": "^7.13.1",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "chromatic": "^11.5.5",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "eslint-plugin-storybook": "^0.8.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rimraf": "^6.0.1",
     "storybook": "^8.2.3",
     "typescript": "^5.2.2",
     "vite": "^5.3.1"
